@@ -1,4 +1,8 @@
 StreamingTest::Application.routes.draw do
+  root to: 'home#index'
+  post '/login', to: 'sessions#login', as: "login"
+  post '/logout', to: 'sessions#logout', as: "logout"
+  post '/video_form', to: 'home#changevid', as: "set_video_source"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
